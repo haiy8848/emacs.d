@@ -21,4 +21,9 @@
 (window-numbering-mode 1)
 ;; }}
 
+(require 'layout-restore)
+(global-set-key [?\C-c ?1] 'layout-save-current)
+(global-set-key [?\C-c ?\C-1] 'layout-restore)
+(global-set-key [?\C-c ?\C-c] 'layout-delete-current)
+
 (provide 'init-misc)

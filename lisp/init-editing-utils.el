@@ -178,7 +178,8 @@
 ;; Train myself to use M-f and M-b instead
 (global-unset-key [M-left])
 (global-unset-key [M-right])
-
+(global-set-key [M-left] 'beginning-of-buffer)
+(global-set-key [M-right] 'end-of-buffer)
 
 
 (defun kill-back-to-indentation ()
