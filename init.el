@@ -24,6 +24,9 @@
 (add-hook 'after-init-hook
           (lambda () (setq gc-cons-threshold sanityinc/initial-gc-cons-threshold)))
 
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages"))
+
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
@@ -61,7 +64,7 @@
 (require 'init-uniquify)
 (require 'init-ibuffer)
 (require 'init-flycheck)
-
+(require 'init-helm-gtags)
 (require 'init-recentf)
 (require 'init-smex)
 ;; If you really prefer ido to ivy, change the comments below. I will
