@@ -1,4 +1,5 @@
 ;; Initialize helm-gtags package
+(require-package 'helm-gtags)
 
 ;; custom variables
 (setq

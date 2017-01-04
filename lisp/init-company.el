@@ -16,8 +16,10 @@
     (setq-default company-backends '((company-capf company-dabbrev-code) company-dabbrev)
                   company-dabbrev-other-buffers 'all))
   (global-set-key (kbd "M-C-/") 'company-complete)
-  (when (maybe-require-package 'company-quickhelp)
-    (add-hook 'after-init-hook 'company-quickhelp-mode))
+  ;; Disable company-quickhelp due to pos-tip-hide issue.
+  ;; (see https://github.com/expez/company-quickhelp/issues/10)
+  ;(when (maybe-require-package 'company-quickhelp)
+  ;  (add-hook 'after-init-hook 'company-quickhelp-mode))
 
   (defun sanityinc/local-push-company-backend (backend)
     "Add BACKEND to a buffer-local version of `company-backends'."
